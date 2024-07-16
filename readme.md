@@ -51,7 +51,7 @@
 
 
 ## Использование
-Бот в Тg: @w2w_test_project_medical_bot
+https://t.me/w2w_test_project_medical_bot
 
 После запуска бота используйте команды или кнопки в Telegram для управления пациентами:
 
