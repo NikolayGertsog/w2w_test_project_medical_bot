@@ -14,10 +14,8 @@
     ```bash
     python -m venv venv
     source venv/bin/activate
-
-Для Windows:
-    ```bash
-    venv\Scripts\activate
+    
+    venv\Scripts\activate # Для Windows
 
 3. Установите зависимости:
     ```bash
