@@ -61,7 +61,7 @@ def process_full_name_step(message):
     try:
         full_name = message.text.strip()
         PatientModel.validate_full_name(full_name)
-        msg = bot.send_message(message.chat.id, "Введите дату рождения в формате ДД.ММ.ГГГГ:")
+        msg = bot.send_message(message.chat.id, "Введите дату рождения в формате 'ДД.ММ.ГГГГ':")
         bot.register_next_step_handler(msg, process_birth_date_step, full_name)
     except ValueError as e:
         bot.send_message(message.chat.id, f"Ошибка валидации: {e}")
@@ -80,11 +80,11 @@ def process_birth_date_step(message, full_name):
 
     except ValidationError as e:
         bot.send_message(message.chat.id, f"Ошибка валидации: {e}")
-        msg = bot.send_message(message.chat.id, "Введите корректную дату рождения в формате ДД.ММ.ГГГГ:")
+        msg = bot.send_message(message.chat.id, "Введите корректную дату рождения в формате 'ДД.ММ.ГГГГ':")
         bot.register_next_step_handler(msg, process_birth_date_step, full_name)
     except ValueError:
-        bot.send_message(message.chat.id, "Ошибка валидации: введенная дата не соответствует формату ДД.ММ.ГГГГ.")
-        msg = bot.send_message(message.chat.id, "Введите корректную дату рождения в формате ДД.ММ.ГГГГ:")
+        bot.send_message(message.chat.id, "Ошибка валидации: введенная дата не соответствует формату 'ДД.ММ.ГГГГ'.")
+        msg = bot.send_message(message.chat.id, "Введите корректную дату рождения в формате 'ДД.ММ.ГГГГ':")
         bot.register_next_step_handler(msg, process_birth_date_step, full_name)
 
 
