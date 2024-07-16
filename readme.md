@@ -6,7 +6,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/username/medical_bot_project.git
+   git clone https://github.com/NikolayGertsog/w2w_test_project_medical_bot.git
    cd medical_bot_project
 
 2. Создайте и активируйте виртуальное окружение
