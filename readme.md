@@ -11,27 +11,41 @@
 
 2. Создайте и активируйте виртуальное окружение
 (Либо используйте альтернативный вариант, см. ниже):
-python -m venv venv
-source venv/bin/activate
+    ```bash
+    python -m venv venv
+    source venv/bin/activate
 
-Для Windows: venv\Scripts\activate
+Для Windows:
+    ```bash
+    venv\Scripts\activate
 
 3. Установите зависимости:
-pip install -r requirements.txt
+    ```bash
+    pip install -r requirements.txt
 
 4. Настройте базу данных:
-python manage.py migrate
+    ```bash
+    python manage.py migrate
 
 5. Запустите бота:
-python patients/bot.py
+    ```bash
+    python patients/bot.py
 
 ## Альтернативный вариант:
 
 Если вы хотите запустить проект без создания виртуального окружения, выполните следующие шаги:
 
-- Убедитесь, что все зависимости установлены, используя команду pip install -r requirements.txt.
-- Настройте базу данных, если необходимо, с помощью команды python manage.py migrate.
-- Запустите сервер разработки Django, используя команду python manage.py runserver
+- Убедитесь, что все зависимости установлены, используя команду 
+    ```bash
+    pip install -r requirements.txt
+
+- Настройте базу данных, если необходимо, с помощью команды 
+    ```bash
+    python manage.py migrate
+
+- Запустите сервер разработки Django, используя команду
+    ```bash
+    python manage.py runserver
 
 Этот вариант используется в случае, если у вас уже настроена среда разработки и не требуется изолированное виртуальное окружение.
 
